@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".more-button").click(function() {
+            $(this).siblings(".task-details").toggle();
+        });
+    });
+</script>
+    <link rel="stylesheet" href="{% static 'task_list.css' %}">
+</head>
+
+<body>
+    <ul>
+        <h1>Task List</h1>
+        {% for task in tasks %}
+            <li>
+                <div class="task-title">{{ task.title }}</div>
+                <button class="more-button">details</button>
+                <div class="task-details">
+                    <div class="description">
+                        <p>{{ task.description }}</p>
+                        <div class="details-footer">
+                            <p>Due Date: {{ task.due_date }}</p>
+                            <p>Time Created: {{ task.timestamp }}</p>
+                        </div>
+                    </div>
+                    {% if task.notes %}
+                        <div class="notes">
+                            <p class="task_notes">Note: {{ task.notes }}</p>
+                        </div>
+                    {% endif %}
+
+                    <div>
+                        <button class="edit-button" onclick="window.location.href='/edit-task/{{ task.id }}'">Edit</button>
+                        <button class="remove-button" onclick="window.location.href='/remove-task/{{ task.id }}'">Remove</button>
+                    </div>
+                </div>
+            </li>
+        {% empty %}
+            <li>No tasks found.</li>
+        {% endfor %}
+    </ul>
+    <button id="create" onclick="window.location.href='/task/create/'">Create a task</button>
+    <button id='home' onclick="window.location.href='/'">Home</button>
+</body>
+
+</html>

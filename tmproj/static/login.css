@@ -1,0 +1,143 @@
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(113, 145, 119, 0.6);
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.login-container {
+    max-width: 25%;
+    font-family: cursive;
+    padding: 20px;
+    background-color: #ffffffd1;
+    box-shadow: 0 0 12px 5px rgb(0 0 0);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: monospace;
+    margin-top: 25px;
+    color: #000;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-bottom: 2.5px solid;
+    outline: none;
+    background-color: #ffffff00;
+    font-size: 19px;
+    font-family: sans-serif;
+}
+
+button.login {
+    background-color: #269b76;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 22px;
+    font-family: monospace;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+p.register-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
+}
+
+p.register-text button {
+    border: none;
+    color: #007500;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #fff;
+    padding: 10px 20px;
+    font-family: monospace;
+    border-radius: 5px;
+}
+
+
+ul.messages {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 300px;
+}
+
+ul.messages li {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+
+ul.messages li.error {
+    color: red;
+}
+
+
+ul.messages li.success {
+    color: #007500;
+}
+
+
+ul.messages li.info {
+    color: #269b76;
+}
+
+
+
+button.login:hover {
+    background-color: #1e7e5e;
+}
+
+
+p.register-text button:hover {
+    background-color: #269b76;
+    color: #fff;
+}
+
+

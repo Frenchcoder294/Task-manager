@@ -1,0 +1,81 @@
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(113, 145, 119, 0.6);
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    color: #950000;
+    font-size: 30px;
+    font-family: monospace;
+    margin-top: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 26px;
+    font-family: monospace;
+    margin: 10px;
+    color: #000;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffffa3;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 4px #000;
+}
+
+button[type="submit"] {
+    background-color: #c0392b;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover,
+a:hover {
+    filter: brightness(1.2);
+}
+
+a {
+    color: #269b76;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #269b76;
+    font-size: 21px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #269b76;
+    color: #fff;
+}

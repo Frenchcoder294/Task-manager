@@ -1,0 +1,127 @@
+body {
+    position: relative;
+    height: 100vh;
+    background-image: url('home.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+}
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(113, 145, 119, 0.6);
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ccffd5;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0px;
+    font-family: cursive;
+    background-color: #123f11;
+    width: 75%;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 4px #8cb7056e;
+}
+
+main {
+    margin: 0 auto;
+}
+
+form {
+    text-align: -webkit-center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #f9ff00d6;
+    font-family: monospace;
+    font-size: 20px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+input[type="text"],
+textarea,
+input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    outline: none;
+    font-family: monospace;
+    box-shadow: 0 0 12px 2px;
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: #062804;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 48%;
+    margin-left: 1%;
+    font-size: 20px;
+    box-shadow: 0 0 12px 2px #197b12b5;
+}
+
+button[type="submit"]:hover {
+    background-color: #359333;
+}
+
+
+.task-list-button {
+    background-color: #21501b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+label[for="id_priority"] {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select#id_priority {
+    width: 104%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    box-shadow: 0 0 12px 2px;
+}
+
+p select#id_priority {
+    margin-bottom: 20px;
+}

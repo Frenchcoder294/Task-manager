@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <header>
+        <h1>Hello, <b><span>{{ user.username }}!</span></b><br> Welcome back</h1>
+    </header>
+    <nav>
+        <h2>
+            <button class='links' onclick="window.location.href='/task/'">Your tasks</button><br><br>
+            <button class='links' onclick="window.location.href='/task/create/'">Create a task</button><br><br>
+        </h2>
+        <button id='logout' onclick="window.location.href='/logout/'">Logout</button>
+    </nav>
+    {% else %}
+    <header>
+        <h1>Wellcome to Task Manager!</h1>
+
+    </header>
+    <p class="description">Task Manager is your personal assistant for staying organized. Create tasks, set due dates,
+        and add notes, and even alerts to ensure you never forget important activities. Log in or register to get started!</p>
+    <nav>
+        <button class='links' onclick="window.location.href='/login/'">Login</button><br><br>
+        <button class='links' onclick="window.location.href='/register/'">Register</button>
+    </nav>
+    {% endif %}
+</body>
+
+</html>
